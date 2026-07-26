@@ -14,7 +14,9 @@ None so far, I've done very rudementary things as of now, mostly just playing ar
 
 ## Concepts Learned
 **Host** - The hardware on which a given machine is run. In my case, my computer is the host to my VM. Similar to an apartment and an apartment complex.
+
 **Guest** - The machine that runs on the host. In my case, my VM which runs on my computer.
+
 **Hypervisor** - The software that allows multiple VMs to run on a single host. In my case, that's VirtualBox. It makes the VM think it's running on real hardware, and translates VM requests to the Host.
 
 ---
