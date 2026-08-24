@@ -37,9 +37,9 @@ Finally, a dive into understanding SSH and tunneling, whether it be public or pr
 ## Package Installation
 When installing packages, the commands you'll mostly use are:
 
-`sudo apt update`
+`sudo apt update`\
 and
-`sudo apt install [package]`
+`sudo apt install [package]`\
 
 apt stands for advanced package tool, just as a fun fact.
 
@@ -53,13 +53,13 @@ The reason why we need sudo for the apt commands is because we're changing more 
 ## Services
 In any given Linux machine, there can be a multitude of services running at any given time. So, knowing how to tell when a service is running can be really helpful.
 
-This is the following command that can tell you whether a service is running:
+This is the following command that can tell you whether a service is running:\
 `systemctl status [service-name]`
 
-Should the given service you're looking at not in the state you want (started, stopped, etc), there are a few commands you can use to change that:
-`(sudo) systemctl start [service-name]` to start
-`(sudo) systemctl stop [service-name]` to stop
-`(sudo) systemctl restart [service-name]` to restart
+Should the given service you're looking at not in the state you want (started, stopped, etc), there are a few commands you can use to change that:\
+`(sudo) systemctl start [service-name]` to start\
+`(sudo) systemctl stop [service-name]` to stop\
+`(sudo) systemctl restart [service-name]` to restart\
 
 ---
 ## SSH
@@ -74,9 +74,9 @@ To use ssh, we generate a key-pair on your local computer, which gives you both 
 
 Then, take the public key and share it with whichever server you wish you remotely connect to. The private key must NEVER leave your local computer. Also, you're usually given the option to hide your private key with a passphrase. You should. It's just an extra layer of security. With the public key on your remote server, just add it to the authorized keys file on your machine (create if it doesn't exist).
 
-Once you've manually set this up, you're ready to connect. To connect to the remote server, just run the following command:
-`ssh [serverip]`
-or if you have a different username on the server:
+Once you've manually set this up, you're ready to connect. To connect to the remote server, just run the following command:\
+`ssh [serverip]`\
+or if you have a different username on the server:\
 `ssh username:[serverip]`
 
 Your ssh connection can either be done through a public connection or a private one. With a public connection, you can connect from anywhere, but with a private network, you'd need a VPN or have to be connected to the same network.
