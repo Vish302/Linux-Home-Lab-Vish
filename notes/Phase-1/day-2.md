@@ -38,8 +38,8 @@ Finally, a dive into understanding SSH and tunneling, whether it be public or pr
 When installing packages, the commands you'll mostly use are:
 
 `sudo apt update`\
-and
-`sudo apt install [package]`\
+and\
+`sudo apt install [package]`
 
 apt stands for advanced package tool, just as a fun fact.
 
@@ -59,7 +59,7 @@ This is the following command that can tell you whether a service is running:\
 Should the given service you're looking at not in the state you want (started, stopped, etc), there are a few commands you can use to change that:\
 `(sudo) systemctl start [service-name]` to start\
 `(sudo) systemctl stop [service-name]` to stop\
-`(sudo) systemctl restart [service-name]` to restart\
+`(sudo) systemctl restart [service-name]` to restart
 
 ---
 ## SSH
