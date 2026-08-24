@@ -6,6 +6,7 @@ A summary on the file hierarchy system, including what each important directory 
 Also, a bit of my insights on package installations, as this is something important to a lot of projects one could do. The package I downloaded was SSH.
 
 Finally, a dive into understanding SSH and tunneling, whether it be public or private. I also looked into how the encryption works on a surface level.
+
 ---
 ## File Hierarchy
 /bin -> Binaries, where things like commands are stored (ls, cat, etc). This specific directory holds what regular users use for tasks.
@@ -31,6 +32,7 @@ Finally, a dive into understanding SSH and tunneling, whether it be public or pr
 /var -> This is where files that change on runtime go. Similar to /tmp, but it's permanent in the sense that it never gets deleted.
 
 /usr -> Where user applications and utilities exist.
+
 ---
 ## Package Installation
 When installing packages, the commands you'll mostly use are:
@@ -46,6 +48,7 @@ So, why do we have do sudo apt update every time? Well it's because every time w
 When doing sudo apt install, we can follow up the full command with a -y flag. This flag just means yes and answers Linux's are you sure you want to install this package question.
 
 The reason why we need sudo for the apt commands is because we're changing more than just any given user's home directory. Usually, when using commands as a user, the only thing we can change is things in our home directory, but since packages go beyond that, superuser is required.
+
 ---
 ## Services
 In any given Linux machine, there can be a multitude of services running at any given time. So, knowing how to tell when a service is running can be really helpful.
@@ -57,6 +60,7 @@ Should the given service you're looking at not in the state you want (started, s
 `(sudo) systemctl start [service-name]` to start
 `(sudo) systemctl stop [service-name]` to stop
 `(sudo) systemctl restart [service-name]` to restart
+
 ---
 ## SSH
 Standing for Secure Shell, this package is a method used to connect to remote Linux machines. This is done through the use of an encrypted tunnel which connects your local machine to the server through a shell. It allows you to control the server as if you were a user working directly on the machine itself.
