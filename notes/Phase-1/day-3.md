@@ -28,8 +28,23 @@ Making groups is also a simple, single-line task:\
 To then add a specific user to a group, you do the following:\
 ```sudo usermod -aG [group name] [username]```
 
+Now, files and permissions can be given to groups of people rather than specific members. This not only saves a lot of time initially when adding permissions, but it also saves time in the future, when members need to be added or removed from the group.
+
 ---
 ## Files and File Permissions
+Files can be made by any user using the touch command. However, when making a file, it has certain permissions on who can read, write, and execute it. To check these permissions, we do the following command:\
+```ls -l [file name]```
+
+This will output a line of text that looks something like this:\
+```-rwxrw-rw-...```\
+These 10 characters are called permission bits, and they show what level of permission a certain category of users have in regards to that file.
+
+The first bit is used to classify the file. For example, - is a regular file, whereas d is a directory, etc. The next 3 bits are the user permission bits. The first of the three is the read bit, denoted by the r. The second is the write bit, denoted by the w. Finally, the last one is the execute bit, denoted by the x.
+
+The second set of three represent the same type of bits, but represent group permissions. The last three represent everyone else's permissions.
+
+For any given file, permissions can be changed using the following command:\
+```chmod [permission number] [file name]```
 
 ---
 ## Sudo
