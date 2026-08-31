@@ -1,6 +1,7 @@
 # Day 3 - Understanding users and permissions
 
 ## General Summary
+Today was a study on users, groups, and files. We took at a look at how we can manipulate and inspect users, then moved to files and file permissions. Finally, we took a quick look at Sudo.
 
 ---
 ## Adding Users and Groups
@@ -68,3 +69,8 @@ To move a file, we use the mv command as follows:\
 
 ---
 ## Sudo
+The sudo command allows any user to act as the root user. The root user is the most powerful user in a Linux system, and they have complete permissions over all the services on the machine, so being logged in on it the entire time is a security issue. 
+
+Most every day tasks don't require the root user's power, but for those that do, the sudo command make it easy to execute them without being the root user yourself.
+
+Limiting control of the root user, only granting permissions to those who really need it is one of the biggest jobs of a cybersecurity professional.
