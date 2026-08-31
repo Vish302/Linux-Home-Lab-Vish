@@ -53,9 +53,18 @@ Where the first letter is who you're changing permissions for (u = user/owner, g
 
 Depending on what permissions you set, various different users can interact with the file. However, it's important to note that it's not just the file permissions that determines how someone interacts with a file. The permissions of the directory it's in is important too.
 
+Of course, file permissions can only go so far. If necessary, another option is to change the file's ownership using the following command:\
+```sudo chown [username] [file name]```\
+NOTE: sudo is required here because only the root user can change file ownership
+
+To change a file's group, you use the chown command as well:\
+```sudo chown [username]:[groupname] [file name]```\
+or\
+```sudo chown [username]: [file name]```\
+if you wanted to have the file take the group of the user.
+
 To move a file, we use the mv command as follows:\
 ```mv [file name] [new directory]```
-
 
 ---
 ## Sudo
