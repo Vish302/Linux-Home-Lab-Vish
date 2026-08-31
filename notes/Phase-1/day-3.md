@@ -44,7 +44,18 @@ The first bit is used to classify the file. For example, - is a regular file, wh
 The second set of three represent the same type of bits, but represent group permissions. The last three represent everyone else's permissions.
 
 For any given file, permissions can be changed using the following command:\
-```chmod [permission number] [file name]```
+```chmod [permission number] [file name]```\
+Where the permission number is a 3 digit number based on the permission bits between 777 and 000. The first digit is the permissions of the owner, the second the group, and finally everyone else.
+
+You can also use another approach with chmod:\
+```chmod [u, g, o, a][+, -, =][rwx] [file name]```\
+Where the first letter is who you're changing permissions for (u = user/owner, g = group, o = others, a = all), whether you're adding, subtracting, or equating, and what permission.
+
+Depending on what permissions you set, various different users can interact with the file. However, it's important to note that it's not just the file permissions that determines how someone interacts with a file. The permissions of the directory it's in is important too.
+
+To move a file, we use the mv command as follows:\
+```mv [file name] [new directory]```
+
 
 ---
 ## Sudo
