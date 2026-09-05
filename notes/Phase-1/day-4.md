@@ -1,6 +1,29 @@
 # Day 4 - Processes and Services
 
 ## General Summary
+A study on processes and how they work. There's a lot of terminology in this one that will be reoccuring, so it's good to know now. There's also a study on process termination and reading.
+
+---
+## Concepts to Understand
+Process - A program that a machine executes.
+
+PID (Process ID) - An identification number used to identify processes.
+
+Parent/child processes - When a process spawns another process, the spawner is the parent and the spawnee is the child.
+
+Daemon - A process that runs in the background without user input (think system processes).
+
+Service - Basically a Daemon but for Windows OS (Daemon is for Linux)
+
+systemd - The initialization system that manages the system's tasks.
+
+CPU usage - Portion of your CPU's working capacity that's currently being used to run tasks.
+
+Memory usage - How much of your computer's Memory is being used to run tasks.
+
+Signals - Messages used within the computer to communicate actions.
+
+Terminating vs. killing a process - Terminate is a calm, gentle turning off of a process, whereas killing is abrubt and rough.
 
 ---
 ## Processes
@@ -27,3 +50,10 @@ NOTE: some flags have -- due to being longer than one letter.
 
 ---
 ## Working with Processes
+Okay, so now we know how to get a list of all processes. However, what if we want to get a specific process, like say firefox? To do that, we use basic piping and the grep command:
+```$ps aux | grep "firefox"```
+This way, we can find the process for firefox using its name.
+
+Now, what if we have a process we don't like? How do we get rid of it? Well, in Linux, there's a very simple command to stop a process:
+```$kill [signal (by default it's -15, but if you -9 it'll abruptly stop the process)] [PID]```
+Depending on the version of kill you use, you either terminate or kill the process. Since processes are a natural way of attacking a system, knowing how to get rid of a process is very important.
